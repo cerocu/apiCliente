@@ -1,0 +1,16 @@
+create table cliente(     
+id integer AUTO_INCREMENT NOT NULL, 	
+nombre_Usuario VARCHAR(50), 	
+contrasena VARCHAR(50), 
+nombre VARCHAR(50), 	
+apellidos VARCHAR(50),  
+correo_Electronico VARCHAR(50), 
+edad Integer, 	
+estatura Integer, 
+peso Integer, 
+imc Integer, 
+geb Integer, 
+eta Integer, 	
+fecha_Creacion Date, 
+fecha_Actualizacion Date, 
+PRIMARY KEY(id) );
