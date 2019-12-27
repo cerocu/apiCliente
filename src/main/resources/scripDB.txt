@@ -1,0 +1,42 @@
+
+
+
+create table productos(
+producto  int not null,
+nombre  varchar(100),
+precio decimal(15,6)
+PRIMARY KEY (producto)
+);
+
+create table cajeros(
+cajero int not null,
+nomApels varchar(255)
+PRIMARY key (cajero)
+);
+
+maquinas_registradoras(
+maquina int not null,
+piso int,
+PRIMARY KEY (maquina)
+);
+
+
+
+
+
+
+
+
+
+
+
+create table venta(
+cajero int not null,
+maquina int not null,
+producto int not null,
+
+ CONSTRAINT id_foreign_cajero FOREIGN key (cajero) REFERENCES cajeros(cajero),
+ CONSTRAINT id_foreign_maquina FOREIGN KEY (maquina) REFERENCES maquinas_registradoras (maquina),
+ CONSTRAINT id_foreign_producto FOREIGN KEY (producto) REFERENCES productos(producto)
+
+);
